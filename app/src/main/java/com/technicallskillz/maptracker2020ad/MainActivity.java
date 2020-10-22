@@ -135,9 +135,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void getLocationUpdate() {
         LocationRequest locationRequest = LocationRequest.create();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        //request for gps
+        //request for gps time
         locationRequest.setInterval(5000);
-        //data save
+        //data save time
         locationRequest.setFastestInterval(30000);
 
 
@@ -191,10 +191,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         StringBuilder sb = new StringBuilder();
         if (addresses.size() > 0) {
             Address address = addresses.get(0);
-            sb.append(address.getAddressLine(0)).append("\n");
-            sb.append(address.getLocality()).append("\n");
-            sb.append(address.getPostalCode()).append("\n");
-            sb.append(address.getCountryName());
+            //sb.append(address.getAddressLine(0)).append("\n");
+            sb.append(address.getPlace().getName())//.append("\n");
+            //sb.append(address.getLocality()).append("\n");
+            //sb.append(address.getPostalCode()).append("\n");
+            //sb.append(address.getCountryName());
 
         }
 

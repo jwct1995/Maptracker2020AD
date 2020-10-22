@@ -191,11 +191,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         StringBuilder sb = new StringBuilder();
         if (addresses.size() > 0) {
             Address address = addresses.get(0);
-            //sb.append(address.getAddressLine(0)).append("\n");
-            sb.append(address.getPlace().getName())//.append("\n");
-            //sb.append(address.getLocality()).append("\n");
-            //sb.append(address.getPostalCode()).append("\n");
-            //sb.append(address.getCountryName());
+            sb.append(address.getAddressLine(0)).append("\n");
+            //sb.append(address.getPlace().getName())//.append("\n");
+            sb.append(address.getLocality()).append("\n");
+            sb.append(address.getPostalCode()).append("\n");
+            sb.append(address.getCountryName());
 
         }
 

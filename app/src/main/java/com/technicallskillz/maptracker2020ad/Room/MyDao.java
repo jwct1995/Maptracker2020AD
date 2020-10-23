@@ -10,12 +10,12 @@ import java.util.List;
 @Dao
 public interface MyDao {
 
-    //Querry to store song in Room Database
+    //Querry to store data in Room Database
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    public void InsertSong(Item item);
+    public void InsertDt(Item item);
 
 
-    //    Querry to fetch stored song
+    //    Querry to fetch stored data
     @Query("SELECT  * FROM  Item")
     List<Item> getData();
 }

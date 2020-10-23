@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         //store into phone memory
         Item item = new Item(sb.toString(), date, latLng.longitude, latLng.latitude);
         RoomDatabaseClass database = Room.databaseBuilder(MainActivity.this, RoomDatabaseClass.class, "myDatabase").allowMainThreadQueries().build();
-        database.myDao().InsertSong(item);
+        database.myDao().InsertDt(item);
         Toast.makeText(this, "Data Stored", Toast.LENGTH_SHORT).show();
     }
 
